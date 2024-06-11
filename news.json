@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "title": "Lorem Ipsum Dolor Sit Amet",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet ac eros id consectetur.",
+      "image": "https://placehold.co/600x400"
+    },
+    {
+      "id": 2,
+      "title": "Nulla Sollicitudin",
+      "summary": "Nulla sollicitudin odio sit amet odio vehicula, in ullamcorper velit varius.",
+      "content": "Nulla sollicitudin odio sit amet odio vehicula, in ullamcorper velit varius. Integer id lorem magna.",
+      "image": "https://placehold.co/600x400"
+    },
+    {
+      "id": 3,
+      "title": "Vestibulum Id",
+      "summary": "Vestibulum id urna sed augue vestibulum condimentum sit amet at dolor.",
+      "content": "Vestibulum id urna sed augue vestibulum condimentum sit amet at dolor. Proin ut velit a purus semper lobortis.",
+      "image": "https://placehold.co/600x400"
+    },
+    {
+      "id": 4,
+      "title": "Cras Mattis Egestas",
+      "summary": "Cras mattis egestas risus, nec tincidunt justo convallis vel.",
+      "content": "Cras mattis egestas risus, nec tincidunt justo convallis vel. Ut eu nulla vel ex tristique pharetra.",
+      "image": "https://placehold.co/600x400"
+    },
+    {
+      "id": 5,
+      "title": "Integer Euismod",
+      "summary": "Integer euismod ipsum ut dignissim.",
+      "content": "Integer euismod ipsum ut dignissim. Aliquam vel augue eget ante congue tincidunt.",
+      "image": "https://placehold.co/600x400"
+    },
+    {
+        "id": 1,
+        "title": "Lorem Ipsum Dolor Sit Amet",
+        "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet ac eros id consectetur.",
+        "image": "https://placehold.co/600x400"
+      },
+      {
+        "id": 2,
+        "title": "Nulla Sollicitudin",
+        "summary": "Nulla sollicitudin odio sit amet odio vehicula, in ullamcorper velit varius.",
+        "content": "Nulla sollicitudin odio sit amet odio vehicula, in ullamcorper velit varius. Integer id lorem magna.",
+        "image": "https://placehold.co/600x400"
+      },
+      {
+        "id": 3,
+        "title": "Vestibulum Id",
+        "summary": "Vestibulum id urna sed augue vestibulum condimentum sit amet at dolor.",
+        "content": "Vestibulum id urna sed augue vestibulum condimentum sit amet at dolor. Proin ut velit a purus semper lobortis.",
+        "image": "https://placehold.co/600x400"
+      },
+      {
+        "id": 4,
+        "title": "Cras Mattis Egestas",
+        "summary": "Cras mattis egestas risus, nec tincidunt justo convallis vel.",
+        "content": "Cras mattis egestas risus, nec tincidunt justo convallis vel. Ut eu nulla vel ex tristique pharetra.",
+        "image": "https://placehold.co/600x400"
+      },
+      {
+        "id": 5,
+        "title": "Integer Euismod",
+        "summary": "Integer euismod ipsum ut dignissim.",
+        "content": "Integer euismod ipsum ut dignissim. Aliquam vel augue eget ante congue tincidunt.",
+        "image": "https://placehold.co/600x400"
+      }
+  ]
+  

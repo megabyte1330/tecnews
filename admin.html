@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração de Notícias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Administração de Notícias</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Adicionar/Editar Notícia</h2>
+            <form id="news-form">
+                <input type="hidden" id="news-id">
+                <label for="news-title">Título:</label>
+                <input type="text" id="news-title" required>
+                <label for="news-summary">Resumo:</label>
+                <input type="text" id="news-summary" required>
+                <label for="news-content">Conteúdo:</label>
+                <textarea id="news-content" required></textarea>
+                <label for="news-image">URL da Imagem:</label>
+                <input type="text" id="news-image" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </section>
+        <section>
+            <h2>Notícias Existentes</h2>
+            <div id="news-list">
+                <!-- Lista de notícias será carregada aqui -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Site de Notícias</p>
+    </footer>
+    <script src="admin-scripts.js"></script>
+</body>
+</html>

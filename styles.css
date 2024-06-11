@@ -1,0 +1,382 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-top: 3em;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 1em;
+    z-index: 999;
+    background-color:blue;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 10%;
+    display: flex;
+
+}
+footer{
+    width: 100%;
+    z-index: 999;
+    background-color:blue;
+    color: white;
+    text-align: center;
+    align-items: center;
+    padding: 1.5em 0;
+    display: flex;
+}
+
+.title {
+    left: 0;
+    z-index: -90;
+    right: 0;
+    position: fixed;
+}
+footer p {
+    margin: 0;
+}
+
+/* Main Styles */
+main {
+    max-width: 70%;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    main {
+        max-width: 95%;
+    }
+}
+.news-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    justify-content: space-between; /* Adicionado para distribuir o espaço entre as colunas */
+}
+
+.news-item {
+    flex: 1 1 calc(30% - 1em); 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.news-item:hover {
+    transform: scale(1.02);
+}
+
+.news-item h2 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    padding: 0 1em;
+}
+
+.news-item p {
+    margin: 0.5em 0;
+    padding: 0 1em 1em;
+    color: #666;
+}
+
+/* Search Bar */
+#search-form {
+    position: relative;
+    max-width: 500px;
+    /* margin: 1em auto; */
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.75em 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 1em;
+}
+
+#search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-results a {
+    display: block;
+    padding: 0.75em 1em;
+    color: #333;
+}
+
+#search-results a:hover {
+    background-color: #f4f4f9;
+}
+
+button[type="submit"] {
+    padding: 0.75em 1em;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 2em;
+    padding: 1em 0;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* News Item Image */
+.news-item img {
+    width: 100%; /* Ajuste para 100% */
+    height: auto;
+    display: block; /* Garantir que a imagem é um bloco */
+    margin: 0; /* Remover margem */
+}
+
+/* Administração de Notícias */
+#news-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 600px;
+    margin: 1em auto;
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#news-form label {
+    font-weight: bold;
+}
+
+#news-form input, #news-form textarea {
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#news-form button {
+    padding: 0.75em;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#news-form button:hover {
+    background-color: #2980b9;
+}
+
+#news-list {
+    max-width: 600px;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.news-item {
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+    margin: 0;
+}
+
+.news-item p {
+    color: #666;
+}
+
+.news-item button {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.news-item button:hover {
+    background-color: #c0392b;
+}
+/* Estilos específicos para a página de registro */
+
+#register-section {
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#register-form input {
+    width: calc(100% - 2em);
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#register-form button {
+    width: 100%;
+    padding: 0.75em;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#register-form button:hover {
+    background-color: #2980b9;
+}
+
+.img-menu{
+    height: 30px;
+    width: 30px;
+}
+/* Sidebar styles */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #3498db;
+    color: white;
+    padding: 1em;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+#sidebar.visible {
+    transform: translateX(0);
+}
+
+#sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar nav ul li {
+    margin: 1em 0;
+}
+
+#sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#sidebar nav ul li a:hover {
+    text-decoration: underline;
+}
+.login-section {
+    /* Outras propriedades já existentes */
+    display: none;
+    background-color: white;
+    border-radius: 5px;
+    height: 60%;
+    width: 40%;
+    position: fixed;
+    z-index: 999;
+    top: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.login-section h2 {
+    font-size: 3em;
+    text-align: center;
+    height: 1rem;
+}
+
+#login-form {
+    display: grid;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+#login-form input{
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.active {
+    display: grid;
+}

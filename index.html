@@ -1,60 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecNews - Seu informativo sobre tecnologia!</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Site de Notícias</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header class="cabecalho">
-        <div class="mãe">
+    <header>
         <figure>
             <img class="img-menu" src="./img/main-menu.png">
         </figure>
-        <h1>TECNEWS</h1>
-        <div class="box-pesquisa">
-            <input class="pesquisa" id="pesquisa" placeholder="Pesquisa">
-            <figure>
-                <img class="img-lupa" id="lupa" src="./img/search.png">
-            </figure>
-            </div>
-        </div>
-
+        <h1 class="title">TECNEWS</h1>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Buscar notícias..." required>
+            <div id="search-results" class="dropdown-content hidden"></div>
+            <button type="submit">Buscar</button>
+        </form>
     </header>
-    <div class="pai">
-
-        <div class="noticia-principal">
-            <p class="p_noticia_principal">Busca por profissionais da área de TI aumenta em 60% em relação ao ano de
-                2023
-            </p>
-            <img src="./img/1.avif" alt="">
-        </div>
-        <hr>
-
-        <ul class="list-news">
-            <li class="news-li">
-                <p>Busca por profissionais da área de TI aumenta em 60% em relação ao ano de 2023</p>
-            </li>
-
-            <li class="news-li">
-                <p>Busca por profissionais da área de TI aumenta em 60% em relação ao ano de 2023</p>
-            </li>
-            <li class="news-li">
-                <p>Busca por profissionais da área de TI aumenta em 60% em relação ao ano de 2023</p>
-            </li>
-        </ul>
-
-    </div>
-
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <section id="news-container">
+            <!-- Grupos de notícias serão carregados aqui -->
+        </section>
+         <!-- Adicione um formulário de login -->
+         <section id="login-section" class="login-section" >
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="login-error" style="color: red; display: none;">Credenciais inválidas. Tente novamente.</div>
+        </section>
+        <button id="botaoteste">Open Modal</button>
+    </main>
     <footer>
-
+        <p>&copy; 2024 Site de Notícias</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
-
-<script src="script.js"></script>
-
-
 </html>
