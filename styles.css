@@ -380,3 +380,15 @@ footer {
 .active {
     display: grid;
 }
+#hideall {
+    width: 100%;
+    height: 100%;
+    position: fixed;    
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 990;
+    top: 0;
+}
+#hideall.visible {
+    display: flex;
+}

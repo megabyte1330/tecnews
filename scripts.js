@@ -122,11 +122,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Seleciona o elemento sidebar
     const sidebar = document.getElementById("sidebar");
+    const hideall = document.getElementById('hideall');
+     hideall.addEventListener('click', function() {
+        sidebar.classList.toggle('visible');
+        hideall.classList.toggle('visible');
+
+     });
 
     // Seleciona o ícone do menu
     const menuIcon = document.querySelector("header figure");
      menuIcon.addEventListener('click', function() {
             sidebar.classList.toggle('visible');
+            hideall.classList.toggle('visible');
+            
         });
       // Função de login
       function login(event) {
