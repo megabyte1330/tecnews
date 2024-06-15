@@ -2,22 +2,43 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("Documento carregado");
 
     const apiUrl = 'http://localhost:3000';
-
-    // Função para carregar os detalhes da notícia
-    function loadNewsDetail(newsData) {
-        const params = new URLSearchParams(window.location.search);
-        const newsId = params.get('id');
-        
-        if (newsId) {
-            const news = newsData.find(item => item.id == newsId);
-            if (news) {
-                document.getElementById('news-title').innerText = news.title;
-                document.getElementById('news-content').innerText = news.content;
-            } else {
-                document.getElementById('news-detail').innerHTML = '<p>Notícia não encontrada.</p>';
+        // Função para carregar os detalhes da notícia
+        function loadNewsDetail(newsData) {
+            const params = new URLSearchParams(window.location.search);
+            const newsId = params.get('id');
+            
+            if (newsId) {
+                const news = newsData.find(item => item.id == newsId);
+                if (news) {
+                    document.getElementById('news-title').innerText = news.title;
+                    document.getElementById('news-content').innerText = news.content;
+                } else {
+                    document.getElementById('news-detail').innerHTML = '<p>Notícia não encontrada.</p>';
+                }
             }
         }
+    
+    let usertype = localStorage.getItem('usertype') || ""; // Recupera o usertype do localStorage
+    const username = localStorage.getItem('username') || ""; // Recupera o username do localStorage
+    const ul = document.querySelector(".lista")
+    if (usertype === 'admin') {
+    // Verifica se o usuário é admin
+        ul.innerHTML += `<li><a href="/admin.html">Gerenciar Notícias</a></li>`;
+        }
+    // Oculta o botão de login se o username não estiver vazio
+    if (username) {
+        const botaoteste = document.getElementById('botaoteste');
+        if (botaoteste) {
+            botaoteste.style.display = 'none';
+            ul.innerHTML += `<li><a href="" id="sair">Sair</a></li>`;
+            const logout = this.getElementById('sair')
+    logout.addEventListener('click', function(){
+        localStorage.clear()
+        
+    });
+        }
     }
+    
 
     // Função para carregar a lista de notícias em grupos de tamanhos variados
     function loadNewsList(newsData) {
@@ -123,10 +144,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Seleciona o elemento sidebar
     const sidebar = document.getElementById("sidebar");
     const hideall = document.getElementById('hideall');
+    // const ul = document.querySelector(".lista")
      hideall.addEventListener('click', function() {
-        sidebar.classList.toggle('visible');
-        hideall.classList.toggle('visible');
-
+        sidebar.classList.remove('visible');
+        hideall.classList.remove('visible');
+        lgn.classList.remove('active');
      });
 
     // Seleciona o ícone do menu
@@ -136,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hideall.classList.toggle('visible');
             
         });
+    
       // Função de login
       function login(event) {
         event.preventDefault();
@@ -153,6 +176,20 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             if (data.success) {
                 alert('Login bem-sucedido!');
+                document.getElementById('login-section').classList.toggle('active');
+                usertype = data.level;
+                // Salva os dados de login no localStorage
+                localStorage.setItem('username', username);
+                localStorage.setItem('usertype', usertype);
+                hideall.classList.remove('visible');
+                document.getElementById('botaoteste').style.display = 'none';
+                if (usertype === 'admin') {
+
+                    ul.innerHTML += `<li><a href="/admin.html">Gerenciar Notícias</a></li>`;
+                    
+                }
+                ul.innerHTML += `<li><a href="" id="sair">Sair</a></li>`;
+
                 // Redirecionar ou atualizar a interface do usuário conforme necessário
             } else {
                 document.getElementById('login-error').style.display = 'block';
@@ -160,6 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error('Erro ao fazer login:', error));
     }
+
 
     // Adicionar evento ao formulário de login
     const loginForm = document.getElementById('login-form');
@@ -170,6 +208,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const botaoteste = document.getElementById('botaoteste')
     botaoteste.addEventListener('click', function(){
         lgn.classList.toggle('active');
+        sidebar.classList.toggle('visible');
+        
     });
 
     

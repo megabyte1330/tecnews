@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const apiUrl = 'http://localhost:3000';
-
+    let usertype = localStorage.getItem('usertype') || ""; // Recupera o usertype do localStorage
+    if (usertype === 'admin') {
+        console.log('usuário admin')}
     // Função para carregar as notícias existentes
     function loadNews() {
         fetch(`${apiUrl}/news`)
@@ -80,7 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .catch(error => console.error('Erro ao adicionar notícia:', error));
         }
+        
     });
+    
 
     // Carregar as notícias ao iniciar a página
     loadNews();
