@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (news) {
                     document.getElementById('news-title').innerText = news.title;
                     document.getElementById('news-content').innerText = news.content;
+                    document.getElementById('newsimg').src= news.image;
                 } else {
                     document.getElementById('news-detail').innerHTML = '<p>Notícia não encontrada.</p>';
                 }
@@ -43,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para carregar a lista de notícias em grupos de tamanhos variados
     function loadNewsList(newsData) {
         const newsContainer = document.getElementById('news-container');
-        const groupSizes = [1, 2, 3, 2]; // Exemplo de distribuição dos tamanhos dos grupos
+        let groupSizes = [1, 2, 3, 2]; 
+        if (window.matchMedia("(max-width: 767px)").matches)
+            groupSizes = [1];
     
         let newsIndex = 0;
         let groupIndex = 0;

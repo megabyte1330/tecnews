@@ -42,6 +42,13 @@ header {
     display: flex;
 
 }
+@media (max-width: 768px) {
+    header {
+        max-width: 95%;
+        padding: 2em 10%;
+        justify-content: space-around;
+    }
+}
 footer{
     width: 100%;
     z-index: 999;
@@ -73,6 +80,7 @@ main {
 @media (max-width: 768px) {
     main {
         max-width: 95%;
+        padding: 0;
     }
 }
 .news-group {
@@ -337,7 +345,6 @@ footer {
     text-decoration: underline;
 }
 .login-section {
-    /* Outras propriedades já existentes */
     display: none;
     position: fixed;
     background: #FFFFFF;
@@ -351,6 +358,11 @@ footer {
     top: 3em;
     padding: 2%;
 
+}
+@media (max-width: 768px) {
+    .login-section {
+        width: 80%;
+    }
 }
 
 .login-section h2 {
