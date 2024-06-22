@@ -30,6 +30,17 @@ node server.js
 ```
 Após isso, apenas para fins de teste, você poderá abrir o arquivo index.html utilizando o a extensão Live Server por exemplo, ou apenas abrir o arquivo em seu navegador.
 
+Por ser apenas um protótipo, os dados de login são estáticos e armazenados no próprio arquivo do servidor, apenas para fins de teste.
+Para ver as diferentes condições para cada usuário, use os dados de login abaixo:
+
+Usuário administrador:
+User: admin
+Senha: 1234
+
+Usuário padrão:
+User: user1
+Senha: password
+
 
 
 ## ✒️ Autores

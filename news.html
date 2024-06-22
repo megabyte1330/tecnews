@@ -7,15 +7,44 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="newsheader">
-        <h1>Detalhes da Notícia</h1>
+    <header>
+        <figure>
+            <img class="img-menu" src="./img/main-menu.png">
+        </figure>
+        <h1 class="title">TECNEWS</h1>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Buscar notícias..." required>
+            <div id="search-results" class="dropdown-content hidden"></div>
+            <button type="submit">Buscar</button>
+        </form>
     </header>
+    <aside id="sidebar">
+        <nav>
+            <ul id="lista" class="lista">
+
+                <li><a id="botaoteste" href="#">Login</a></li>
+                <li><a href="/index.html">Home</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <div id="hideall" class="hideall hidden"></div>
     <main>
         <article id="news-detail">
-            <h2 id="news-title">Título da Notícia</h2>
+            <h1 id="news-title">Título da Notícia</h1>
             <img src="" alt="" id="newsimg">
             <p id="news-content">Conteúdo completo da notícia...</p>
         </article>
+        <section id="login-section" class="login-section" >
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="login-error" style="color: red; display: none;">Credenciais inválidas. Tente novamente.</div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Site de Notícias</p>

@@ -45,7 +45,7 @@ header {
 @media (max-width: 768px) {
     header {
         max-width: 95%;
-        padding: 2em 10%;
+        padding: 2em 2%;
         justify-content: space-around;
     }
 }
@@ -56,8 +56,8 @@ footer{
     color: white;
     text-align: center;
     align-items: center;
-    padding: 1.5em 0;
     display: flex;
+    padding: 1em 0;
 }
 
 .title {
@@ -82,6 +82,13 @@ main {
         max-width: 95%;
         padding: 0;
     }
+}
+.mainnews{
+    max-width: 100%;
+    margin: 2em auto;
+    padding: 0 1em;
+
+
 }
 .news-group {
     display: flex;
@@ -174,11 +181,7 @@ button[type="submit"]:hover {
     background-color: #2980b9;
 }
 
-/* Footer Styles */
-footer {
-    margin-top: 2em;
-    padding: 1em 0;
-}
+
 
 /* Utility Classes */
 .hidden {
@@ -187,10 +190,10 @@ footer {
 
 /* News Item Image */
 .news-item img {
-    width: 100%; /* Ajuste para 100% */
+    width: 100%; 
     height: auto;
-    display: block; /* Garantir que a imagem é um bloco */
-    margin: 0; /* Remover margem */
+    display: block; 
+    margin: 0; 
 }
 
 /* Administração de Notícias */
@@ -371,15 +374,6 @@ footer {
     height: 0.5rem;
 }
 
-/* #login-form {
-    display: grid;
-    gap: 10px;
-    width: 80%;
-    margin: 0 0 15px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-} */
 #login-form input{
     outline: 0;
     background: #f2f2f2;
@@ -414,7 +408,33 @@ text-decoration: line-through;
     text-align: center;
     justify-content: center;
 }
+#newsimg {
+    width: 100%;    
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
 
 
+}
+.mainnews{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    text-align: center;
+}
 
-
+@media (min-width: 768px) {
+#news-detail h1 {
+    font-size: 3rem;
+}
+}
+#news-detail h1{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+#news-detail p{
+    text-align: justify;
+}
