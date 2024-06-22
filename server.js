@@ -73,7 +73,7 @@ app.post('/login', (req, res) => {
   }
 });
 
-// Iniciar o servidor
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);

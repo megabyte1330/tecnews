@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -70,13 +70,12 @@ footer p {
     margin: 0;
 }
 
-/* Main Styles */
 main {
     max-width: 70%;
     margin: 2em auto;
     padding: 0 1em;
 }
-/* Media Query para telas menores */
+
 @media (max-width: 768px) {
     main {
         max-width: 95%;
@@ -125,7 +124,7 @@ main {
     color: #666;
 }
 
-/* Search Bar */
+
 #search-form {
     position: relative;
     max-width: 500px;
@@ -183,12 +182,12 @@ button[type="submit"]:hover {
 
 
 
-/* Utility Classes */
+
 .hidden {
     display: none;
 }
 
-/* News Item Image */
+
 .news-item img {
     width: 100%; 
     height: auto;
@@ -196,7 +195,7 @@ button[type="submit"]:hover {
     margin: 0; 
 }
 
-/* Administração de Notícias */
+
 #news-form {
     display: flex;
     flex-direction: column;
@@ -270,7 +269,7 @@ button[type="submit"]:hover {
 .news-item button:hover {
     background-color: #c0392b;
 }
-/* Estilos específicos para a página de registro */
+
 
 #register-section {
     max-width: 400px;
@@ -309,7 +308,7 @@ button[type="submit"]:hover {
     height: 30px;
     width: 30px;
 }
-/* Sidebar styles */
+
 #sidebar {
     position: fixed;
     left: 0;

@@ -202,7 +202,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // Adicionar evento ao formulário de login
     const loginForm = document.getElementById('login-form');
     if (loginForm) {
         loginForm.addEventListener('submit', login);

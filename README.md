@@ -46,7 +46,7 @@ Senha: password
 ## ✒️ Autores
 
 * **Marcus Vinicius de Souza - RA: 6324556** - *Trabalho Inicial* - [Marcus Souza](https://github.com/megabyte1330)
-* **Marcus Vinicius de Souza - RA: 6324556** - *Auxílio Geral* - [Marcus Souza](https://github.com/megabyte1330)
+* **Kenay Cubas Tagomori - RA: 6324695** - *Auxílio Geral* - [Marcus Souza](https://github.com/Tagomor1)
 * **Ryan Augusto Abrahao Duarte - RA: 6324707** - *Auxílio Geral*
 
 
